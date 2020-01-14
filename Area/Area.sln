@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Area", "obj\Debug\netcoreapp3.1\Area.exe", "{06C1275B-CC7E-46F9-9BD4-764702409534}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Users\aliya\source\repos\csharp-exercises\Area\obj\Debug\netcoreapp3.1\Area.exe
+		RemoteMachine = LAPTOP-LVPFMP69
+		StartingDirectory = C:\Users\aliya\source\repos\csharp-exercises\Area\obj\Debug\netcoreapp3.1
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06C1275B-CC7E-46F9-9BD4-764702409534}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FAE4022-A867-4705-B258-1E479EA06139}
+	EndGlobalSection
+EndGlobal

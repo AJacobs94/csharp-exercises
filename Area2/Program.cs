@@ -1,0 +1,33 @@
+﻿using System;
+
+namespace Area2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double area;
+            const double pi = 3.14;
+            string userInput;
+            double radius = 0;
+
+            do
+            {
+                Console.WriteLine("Enter a radius:");
+                userInput = Console.ReadLine();
+                radius = double.Parse(userInput);
+                if (radius < 0)
+                {
+                    Console.WriteLine("Please enter a valid number.");
+                }
+                else
+                {
+                    area = (pi * radius * radius);
+                    Console.WriteLine("The area of the radius " + radius + " is: " + area);
+                }
+            }
+            while (radius < 0);
+            Console.ReadLine();
+        }
+    }
+}
