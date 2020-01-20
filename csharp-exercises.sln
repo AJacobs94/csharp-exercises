@@ -16,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradebookDict", "GradebookD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradebookArray", "GradebookArray\GradebookArray.csproj", "{89051A0E-8D18-48C3-B4E6-D05F62D252CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Area2", "Area2\Area2.csproj", "{CD27E4FB-7D05-449F-B5F1-F245DD90614B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Area2", "Area2\Area2.csproj", "{CD27E4FB-7D05-449F-B5F1-F245DD90614B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
