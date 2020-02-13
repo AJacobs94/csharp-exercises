@@ -23,12 +23,31 @@ namespace CheeseMVC.Controllers
             return View();
         }
 
+        public IActionResult Remove()
+        {
+            return View();
+        }
+
+        
         [HttpPost]
         [Route("/Cheese/Add")]
         public IActionResult NewCheese(string name ,string description)
         {
             Cheeses.Add(name,description);
             return Redirect("/Cheese");
+        }
+
+        [HttpPost]
+        [Route("Cheese/Remove")]
+        public IActionResult Remove(string name)
+        {
+            if (Cheeses.ContainsKey(name))
+            {
+
+                Cheeses.Remove(name);
+                
+            }
+            return Redirect("/Remove");
         }
         
     }
