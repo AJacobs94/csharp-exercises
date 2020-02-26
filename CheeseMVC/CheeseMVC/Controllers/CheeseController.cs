@@ -25,6 +25,7 @@ namespace CheeseMVC.Controllers
 
         public IActionResult Remove()
         {
+            ViewBag.cheeses = Cheeses;
             return View();
         }
 
@@ -38,16 +39,11 @@ namespace CheeseMVC.Controllers
         }
 
         [HttpPost]
-        [Route("Cheese/Remove")]
-        public IActionResult Remove(string name)
+        [Route("/Cheese/Remove")]
+        public IActionResult Remove(string cheese)
         {
-            if (Cheeses.ContainsKey(name))
-            {
-
-                Cheeses.Remove(name);
-                
-            }
-            return Redirect("/Remove");
+            Cheeses.Remove(cheese);
+            return Redirect("/Cheese");
         }
         
     }
