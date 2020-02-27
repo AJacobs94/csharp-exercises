@@ -87,13 +87,13 @@ namespace Restaurant
             return menuString;
         }
         
-        // public bool IsNew()
-        //{
-        //   get
-        //   {
-        //     return Items.Any(x => x.NewItem);
-        //   }
-        // }
+         public bool IsNew()
+        {
+            
+           {
+             return Items.Any(x => x.NewItem());
+           }
+         }
 
     }
 }
