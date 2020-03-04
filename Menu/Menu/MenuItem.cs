@@ -49,12 +49,19 @@ namespace Restaurant
             Console.WriteLine(ToString());
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(Object obj)
         {
-            if (obj == null) return false;
-            MenuItem objAsPart = obj as MenuItem;
-            if (objAsPart == null) return false;
-            else return Equals(objAsPart);
+            if (obj == this)
+            {
+                return true;
+            }
+            if ((obj == null) || (obj.GetType() != GetType()))
+            {
+                return false;
+            }
+         MenuItem menuitemObj = obj as MenuItem;
+            return Name == menuitemObj.Name;
         }
     }
-}
+    }
+
