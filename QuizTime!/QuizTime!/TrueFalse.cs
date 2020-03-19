@@ -4,7 +4,8 @@ using System.Text;
 
 namespace QuizTime_
 {
-    class QuestionTwo : Quiz
+    class TrueFalse : Quiz
     {
+
     }
 }

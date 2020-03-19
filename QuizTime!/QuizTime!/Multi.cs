@@ -4,7 +4,8 @@ using System.Text;
 
 namespace QuizTime_
 {
-    class QuestionThree : Quiz
+    class Multi : Questions
     {
+
     }
 }

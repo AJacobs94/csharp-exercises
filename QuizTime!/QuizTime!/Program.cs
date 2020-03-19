@@ -7,9 +7,9 @@ namespace QuizTime_
     {
         static void Main(string[] args)
         {
-            QuestionOne questionOne = new QuestionOne();
+            
 
-           questionOne.TrueFalse();
+           
         }
     }
 }
