@@ -18,7 +18,10 @@ namespace UserSignup.Models
         {
             users.Add(user);
         }
-
+        public static User GetById(int id)
+        {
+            return users.Single(x => x.UserId == id);
+        }
 
     }
 }

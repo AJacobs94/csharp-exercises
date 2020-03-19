@@ -20,7 +20,7 @@ namespace UserSignup.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpGet]
        public IActionResult Add()
         {
             ViewBag.title = "Add User";
@@ -32,7 +32,7 @@ namespace UserSignup.Controllers
 
        
         [HttpPost]
-        public IActionResult AddUser(User user, string confirm)
+        public IActionResult Add(User user, string confirm)
         {
             if ((string.IsNullOrEmpty(user.Password)) || (string.IsNullOrEmpty(confirm)))
             {
@@ -54,7 +54,14 @@ namespace UserSignup.Controllers
         }
 
         
-        
+        [HttpGet]
+        public IActionResult DisplayDetail(int userId)
+        {
+            ViewBag.title = "User Detail";
+            ViewBag.user = UserData.GetById(userId);
+            return View();
+
+        }
         
     }
 }

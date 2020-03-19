@@ -11,19 +11,15 @@ namespace UserSignup.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string Confirm { get; set; }
+        public int UserId{get; }
+        public static int nextId = 0;
 
 
         public User()
         {
+            UserId = nextId;
 
         }
-        public User(string name, string email,string password, string confirm)
-        {
-            Name = name;
-            Email = email;
-            Password = password;
-            Confirm = confirm;
-            return;
-        }
+      
     }
 }
