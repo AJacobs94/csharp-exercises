@@ -1,5 +1,18 @@
-﻿@model UserSignup.Models.User
-@foreach (var user in ViewBag.users)
+﻿@model UserSignup.ViewModels.AddUserViewModel
+
+@if (Model.Users.Count == 0)
 {
-<h1>Welcome @user.Name</h1>
+    <p>No Users Yet!</p> 
 }
+
+<tr>
+    <th>User</th>
+</tr>
+    @foreach (var name in Model.Users)
+        {
+<tr>
+   <td> @name.Name <br /></td>
+    
+</tr>
+    }
+<p><a asp-controller="User" asp-action="Add">Add User</a></p>

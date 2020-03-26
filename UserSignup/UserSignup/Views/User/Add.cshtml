@@ -1,31 +1,31 @@
-﻿@model UserSignup.Models.User
-<h1>@ViewBag.title</h1>
+﻿@model UserSignup.ViewModels.AddUserViewModel
+<h1>Add User</h1>
 <p>Please fill out this form to create an account</p>
 
 <form method="post">
-    <div class="container">
-
-        <label for="name">Name</label>
-        <input type="text" placeholder="Enter Name" name="name" required />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
         <br />
 
-        <label for="email">Email</label>
-        <input type="text" placeholder="Enter Email" name="email" required />
+        <label asp-for="Email"></label>
+        <input class="form-control" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
         <br />
 
-        <label for="password">Password</label>
-        <input type="password" placeholder="Enter Password" name="password" required />
+        <label asp-for="Password"></label>
+        <input type="password" name="Password" />
+        <span asp-validation-for="Password"></span>
         <br />
 
-        <label for="confirm">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" name="confirm" required />
+        <label for="Confirm"></label>
+        <input type="password" name="Confirm"/>
+        <span asp-validation-for="Confirm"></span>       
         <br />
 
         <button type="submit" value="Register">Register</button>
     </div>
 
-    @if(ViewBag.error!= null)
-    {
-        <p><label>@ViewBag.error</label></p>
-    }
+   
 </form>

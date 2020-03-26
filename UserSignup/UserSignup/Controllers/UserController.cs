@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UserSignup.Models;
+using UserSignup.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,40 +17,40 @@ namespace UserSignup.Controllers
         private static string error = null;
         public IActionResult Index()
         {
-            ViewBag.users = UserData.GetAll();
-            return View();
+            AddUserViewModel model = new AddUserViewModel
+            {
+                Users = UserData.GetAll()
+            };
+            return View(model);
         }
 
-        [HttpGet]
+        
        public IActionResult Add()
         {
-            ViewBag.title = "Add User";
-            ViewBag.error = error;
+            AddUserViewModel addModel = new AddUserViewModel();
 
-            return View();
+            return View(addModel);
         }
 
 
        
         [HttpPost]
-        public IActionResult Add(User user, string confirm)
+        public IActionResult Add(AddUserViewModel addUserViewModel)
         {
-            if ((string.IsNullOrEmpty(user.Password)) || (string.IsNullOrEmpty(confirm)))
+            
+            if (ModelState.IsValid)
             {
-                error = "Passwords cannot be empty.";
-                return Redirect("/User/Add");
-            }
-            if (user.Password != confirm)
-            {
-                error ="Passwords do not match";
-                return Redirect("/User/Add");
-            }
-            else
-            {
+                User user = new User()
+                {
+                    Name= addUserViewModel.Name,
+                    Email=addUserViewModel.Email,
+                    Password=addUserViewModel.Password
+
+                };
                 UserData.Add(user);
+                return Redirect("/User");
             }
-            error = null;
-            return Redirect("/User");
+            return View(addUserViewModel);
             
         }
 
